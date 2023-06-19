@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "TPP-Mask",
+  "description": "讓視窗進入民眾黨遮蔽模式",
+  "version": "1.0",
+  "action": {
+    "default_popup": "/popup/index.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "css/content.css"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon.png",
+        "icon2.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ]
+}

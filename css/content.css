@@ -1,0 +1,25 @@
+.shadow-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow-wrapper.white {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.shadow-wrapper img {
+  width: 60%;
+  user-drag: none;
+}
+
+.scroll-none {
+  overflow: hidden;
+}
