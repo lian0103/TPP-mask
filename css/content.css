@@ -18,6 +18,13 @@
 .shadow-wrapper img {
   width: 60%;
   user-drag: none;
+  filter: none !importent;
+}
+
+@media screen and (min-width: 1400px) {
+  .shadow-wrapper img {
+    max-width: 900px;
+  }
 }
 
 .scroll-none {
