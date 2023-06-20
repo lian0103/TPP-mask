@@ -15,34 +15,27 @@
   },
   "content_scripts": [
     {
-      "js": [
-        "scripts/content.js"
-      ],
-      "css": [
-        "css/content.css"
-      ],
-      "matches": [
-        "https://*/*"
-      ]
+      "js": ["scripts/content.js"],
+      "css": ["css/content.css"],
+      "matches": ["https://*/*"]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "icon.png",
-        "icon2.svg"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
+      "resources": ["icon.png", "icon2.svg"],
+      "matches": ["<all_urls>"]
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "contextMenus"
-  ]
+  "permissions": ["activeTab", "scripting", "contextMenus"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  }
 }
