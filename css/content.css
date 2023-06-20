@@ -18,7 +18,8 @@
 .shadow-wrapper img {
   width: 60%;
   user-drag: none;
-  filter: none !importent;
+  filter: none !important;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 1400px) {
