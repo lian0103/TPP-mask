@@ -23,7 +23,7 @@ const showMask = async () => {
 const hideMask = async () => {
   const target = document.getElementsByTagName("body")[0];
   const target2 = document.getElementById("shadow-wrapper");
-  if (target) {
+  if (target2) {
     target.classList.remove("scroll-none");
     target2.remove();
   }

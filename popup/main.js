@@ -6,7 +6,7 @@ var curTabId = null;
 
 async function getCurTabId() {
   const tabs = await chrome.tabs.query({ currentWindow: true, active: true });
-  return tabs[0].id;
+  return tabs[0]?.id || null;
 }
 
 async function excuteScript(id, fn) {
