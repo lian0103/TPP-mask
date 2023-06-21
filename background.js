@@ -47,7 +47,7 @@ async function genericOnClick(info) {
 }
 chrome.runtime.onInstalled.addListener(function () {
   // Create one test item for each context type.
-  let contexts = [
+  const contexts = [
     "page",
     "selection",
     "link",
