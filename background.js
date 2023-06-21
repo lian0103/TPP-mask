@@ -38,14 +38,6 @@ async function genericOnClick(info) {
       if (curTabId) {
         excuteScript(curTabId, () => {
           window.toggleBgColor();
-        });
-      }
-      break;
-    }
-    case "call_btn4": {
-      const curTabId = await getCurTabId();
-      if (curTabId) {
-        excuteScript(curTabId, () => {
           window.toggleImg();
         });
       }
@@ -68,8 +60,7 @@ chrome.runtime.onInstalled.addListener(function () {
   const actions = [
     { title: "打開遮蔽 Cmd + I", id: "call_btn1" },
     { title: "關閉遮蔽 Cmd + I", id: "call_btn2" },
-    { title: "切換背景色", id: "call_btn3" },
-    { title: "切換圖片", id: "call_btn4" },
+    { title: "切換主題 Cmd + U", id: "call_btn3" },
   ];
 
   actions.forEach((item) => {
@@ -89,7 +80,6 @@ chrome.commands.onCommand.addListener(async (command) => {
       const curTabId = await getCurTabId();
       if (curTabId) {
         if (!isOpen) {
-          console.log("in???");
           await excuteScript(curTabId, () => {
             window.showMask();
           });
@@ -100,6 +90,16 @@ chrome.commands.onCommand.addListener(async (command) => {
           });
           isOpen = false;
         }
+      }
+      break;
+    }
+    case "run-toggle": {
+      const curTabId = await getCurTabId();
+      if (curTabId) {
+        await excuteScript(curTabId, () => {
+          window.toggleBgColor();
+          window.toggleImg();
+        });
       }
       break;
     }

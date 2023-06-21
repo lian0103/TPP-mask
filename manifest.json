@@ -37,6 +37,13 @@
         "mac": "Command+I"
       },
       "description": "Run \"showMask\" on the current page."
+    },
+    "run-toggle": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      },
+      "description": "Run \"toggle\" on the current page."
     }
   }
 }
