@@ -31,11 +31,12 @@
   },
   "permissions": ["activeTab", "scripting", "contextMenus"],
   "commands": {
-    "_execute_action": {
+    "run-showMask": {
       "suggested_key": {
-        "default": "Ctrl+U",
-        "mac": "Command+U"
-      }
+        "default": "Ctrl+I",
+        "mac": "Command+I"
+      },
+      "description": "Run \"showMask\" on the current page."
     }
   }
 }

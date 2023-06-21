@@ -66,8 +66,8 @@ chrome.runtime.onInstalled.addListener(function () {
   ];
 
   const actions = [
-    { title: "打開遮蔽", id: "call_btn1" },
-    { title: "關閉遮蔽", id: "call_btn2" },
+    { title: "打開遮蔽 Cmd + I", id: "call_btn1" },
+    { title: "關閉遮蔽 Cmd + I", id: "call_btn2" },
     { title: "切換背景色", id: "call_btn3" },
     { title: "切換圖片", id: "call_btn4" },
   ];
@@ -79,4 +79,29 @@ chrome.runtime.onInstalled.addListener(function () {
       id: item.id,
     });
   });
+});
+
+var isOpen = false;
+
+chrome.commands.onCommand.addListener(async (command) => {
+  switch (command) {
+    case "run-showMask": {
+      const curTabId = await getCurTabId();
+      if (curTabId) {
+        if (!isOpen) {
+          console.log("in???");
+          await excuteScript(curTabId, () => {
+            window.showMask();
+          });
+          isOpen = true;
+        } else {
+          await excuteScript(curTabId, () => {
+            window.hideMask();
+          });
+          isOpen = false;
+        }
+      }
+      break;
+    }
+  }
 });
