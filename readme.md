@@ -1,4 +1,4 @@
-# google extension manifest_version 3
+# Chrome Extension Manifest V3
 
 ## 效果
 
