@@ -59,3 +59,8 @@ chrome.scripting.executeScript({
 // 監聽在manifest.json裡註冊的commands
 chrome.commands.onCommand.addListener(handleCommand);
 ```
+
+## 註冊快捷鍵
+目前發現，有些電腦可以載入插件後，就按照manifest.json設定快捷鍵。
+但也有的情況是要在[chrome://extensions/shortcuts](chrome://extensions/shortcuts)自行補上設定!
+
