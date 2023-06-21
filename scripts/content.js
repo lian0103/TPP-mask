@@ -66,4 +66,11 @@ const toggleImg = async () => {
   window.hideMask = hideMask;
   window.toggleBgColor = toggleBgColor;
   window.toggleImg = toggleImg;
+
+  // 載入後 強制開啟
+  // window.onload = () => {
+  //   setTimeout(() => {
+  //     window.showMask();
+  //   }, 1000);
+  // };
 })(this);
