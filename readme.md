@@ -64,3 +64,7 @@ chrome.commands.onCommand.addListener(handleCommand);
 目前發現，有些電腦可以載入插件後，就按照manifest.json設定快捷鍵。
 但也有的情況是要在[chrome://extensions/shortcuts](chrome://extensions/shortcuts)自行補上設定!
 
+
+## 補充
+
+[Chrome商店網址](https://chrome.google.com/webstore/detail/tpp-mask/efgndgjkacnfncfjoglfngkjaififlkf?hl=zh-TW&authuser=0)
